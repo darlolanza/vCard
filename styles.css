@@ -1,20 +1,20 @@
 /* ═══════════════════════════════════════════════════════════
-   vCard 2026 — Liquid Glass Dark Design System
+   vCard 2026 — Liquid Glass Light Design System
    ═══════════════════════════════════════════════════════════ */
 
 /* ──── CUSTOM PROPERTIES ──── */
 :root {
-    /* Colors */
-    --bg-deep: #0a0a0f;
-    --bg-surface: rgba(255, 255, 255, 0.04);
-    --glass-bg: rgba(255, 255, 255, 0.06);
-    --glass-border: rgba(255, 255, 255, 0.08);
-    --glass-hover: rgba(255, 255, 255, 0.10);
-    --glass-active: rgba(255, 255, 255, 0.14);
+    /* Colors - LIGHT THEME */
+    --bg-deep: #f8f9fa;
+    --bg-surface: rgba(0, 0, 0, 0.02);
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --glass-border: rgba(0, 0, 0, 0.08);
+    --glass-hover: rgba(255, 255, 255, 0.95);
+    --glass-active: rgba(0, 0, 0, 0.05);
 
-    --text-primary: #f0f0f5;
-    --text-secondary: rgba(240, 240, 245, 0.55);
-    --text-muted: rgba(240, 240, 245, 0.35);
+    --text-primary: #1a1a1f;
+    --text-secondary: rgba(26, 26, 31, 0.65);
+    --text-muted: rgba(26, 26, 31, 0.45);
 
     --accent: #6366f1;
     /* Indigo */
@@ -51,9 +51,9 @@
     --blur-lg: 40px;
     --blur-xl: 60px;
 
-    /* Shadows */
-    --shadow-card: 0 2px 16px rgba(0, 0, 0, 0.3), 0 0 1px rgba(255, 255, 255, 0.05) inset;
-    --shadow-btn: 0 4px 24px rgba(99, 102, 241, 0.3);
+    /* Shadows - LIGHT THEME */
+    --shadow-card: 0 2px 16px rgba(0, 0, 0, 0.08), 0 0 1px rgba(0, 0, 0, 0.02) inset;
+    --shadow-btn: 0 4px 24px rgba(99, 102, 241, 0.2);
     --shadow-glow: 0 0 40px var(--accent-glow);
 
     /* Transitions */
@@ -123,7 +123,7 @@ img {
     position: absolute;
     border-radius: 50%;
     filter: blur(var(--blur-xl));
-    opacity: 0.35;
+    opacity: 0.2;
     will-change: transform;
 }
 
@@ -284,7 +284,7 @@ img {
     font-weight: 800;
     letter-spacing: -0.03em;
     line-height: 1.15;
-    background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-light) 100%);
+    background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -293,7 +293,7 @@ img {
 .hero__company {
     font-size: 0.9375rem;
     font-weight: 600;
-    color: var(--accent-light);
+    color: var(--accent);
     letter-spacing: 0.04em;
     text-transform: uppercase;
 }
@@ -359,7 +359,7 @@ img {
 .quick-action__icon svg {
     width: 20px;
     height: 20px;
-    color: var(--accent-light);
+    color: var(--accent);
 }
 
 .quick-action span {
@@ -396,13 +396,13 @@ img {
     position: absolute;
     inset: 0;
     border-radius: inherit;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, transparent 60%);
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.02) 0%, transparent 60%);
     pointer-events: none;
 }
 
 .bento-card:hover {
     background: var(--glass-hover);
-    border-color: rgba(255, 255, 255, 0.12);
+    border-color: rgba(0, 0, 0, 0.12);
     transform: translateY(-1px);
     box-shadow: var(--shadow-card);
 }
@@ -447,7 +447,7 @@ img {
 .bento-card__icon svg {
     width: 20px;
     height: 20px;
-    color: var(--accent-light);
+    color: var(--accent);
 }
 
 .bento-card__content {
@@ -485,7 +485,7 @@ img {
 
 .bento-card:hover .bento-card__arrow {
     transform: translateX(3px);
-    color: var(--accent-light);
+    color: var(--accent);
 }
 
 .bento-card__arrow svg {
@@ -523,7 +523,7 @@ img {
 .btn .ripple {
     position: absolute;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.3);
     transform: scale(0);
     animation: ripple-anim 600ms ease-out forwards;
     pointer-events: none;
@@ -544,8 +544,8 @@ img {
 
 .btn--primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 32px rgba(99, 102, 241, 0.45);
-    filter: brightness(1.1);
+    box-shadow: 0 6px 32px rgba(99, 102, 241, 0.35);
+    filter: brightness(1.05);
 }
 
 .btn--primary:active {
@@ -561,7 +561,7 @@ img {
 
 .btn--secondary:hover {
     background: var(--glass-hover);
-    border-color: rgba(255, 255, 255, 0.15);
+    border-color: rgba(0, 0, 0, 0.15);
     transform: translateY(-2px);
     box-shadow: var(--shadow-card);
 }
@@ -670,7 +670,7 @@ img {
     padding: var(--space-sm) var(--space-lg);
     border-radius: var(--radius-full);
     background: var(--success);
-    color: #0a0a0f;
+    color: white;
     font-size: 0.875rem;
     font-weight: 600;
     box-shadow: 0 8px 32px rgba(52, 211, 153, 0.3);
@@ -763,5 +763,5 @@ img {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(0, 0, 0, 0.15);
 }
