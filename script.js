@@ -24,6 +24,28 @@
         pageUrl: window.location.href
     };
 
+    // ──── THEME TOGGLE ────
+    function initThemeToggle() {
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        
+        // Load saved theme or default to light
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = html.getAttribute('data-theme');
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                
+                html.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                
+                showToast(newTheme === 'dark' ? 'Tema oscuro activado' : 'Tema claro activado');
+            });
+        }
+    }
+
     // ──── ENTRANCE ANIMATIONS (IntersectionObserver) ────
     function initAnimations() {
         const elements = document.querySelectorAll('[data-animate]');
@@ -206,6 +228,7 @@
 
     // ──── INIT ────
     document.addEventListener('DOMContentLoaded', () => {
+        initThemeToggle();
         initAnimations();
         initRipples();
         initEvents();
