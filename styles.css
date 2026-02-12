@@ -375,8 +375,8 @@ img {
     backdrop-filter: blur(var(--blur-md));
     -webkit-backdrop-filter: blur(var(--blur-md));
     transition: all var(--duration-fast) var(--ease-out-expo);
-    flex: 1;
-    max-width: 120px;
+    cursor: pointer;
+    box-shadow: var(--shadow-card);
 }
 
 .quick-action:hover {
@@ -542,6 +542,41 @@ img {
 .bento-card__arrow svg {
     width: 20px;
     height: 20px;
+}
+
+/* ──── MAP EMBED (Dirección) ──── */
+.bento-card--map {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.bento-card__top {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    width: 100%;
+}
+
+.bento-card__arrow-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-embed {
+    width: 100%;
+    margin-top: var(--space-sm);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    background: var(--bg-surface);
+}
+
+.map-embed iframe {
+    display: block;
+    width: 100%;
+    height: 260px;
+    border: 0;
 }
 
 /* ──── ACTION BUTTONS ──── */
