@@ -470,6 +470,49 @@ img {
     grid-column: span 2;
 }
 
+.bento-card--contacts {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-sm) 0;
+    width: 100%;
+    border-radius: var(--radius-sm);
+    transition: background var(--duration-fast) var(--ease-out-expo);
+}
+
+.contact-item + .contact-item {
+    border-top: 1px solid var(--glass-border);
+    margin-top: var(--space-sm);
+    padding-top: var(--space-md);
+}
+
+.contact-item:hover {
+    background: var(--glass-active);
+}
+
+.contact-item--static:hover {
+    background: transparent;
+}
+
+.bento-card--contacts .bento-card__arrow {
+    margin-left: auto;
+}
+
+.bento-card--contacts .contact-item:hover .bento-card__arrow {
+    transform: translateX(3px);
+    color: var(--accent);
+}
+
+.bento-card--contacts .contact-item:hover .bento-card__icon {
+    background: var(--accent-glow);
+}
+
 .bento-card--accent {
     border-color: var(--accent-glow);
     background: linear-gradient(135deg, var(--accent-subtle), var(--glass-bg));
